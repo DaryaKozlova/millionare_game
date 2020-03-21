@@ -34,7 +34,7 @@ namespace MillionareGame.Forms
             {
                 if (this.Owner is Form1 mainMenu)
                 {
-                    mainMenu._player = player;
+                    mainMenu.Player = player;
                 }
 
                 Close();

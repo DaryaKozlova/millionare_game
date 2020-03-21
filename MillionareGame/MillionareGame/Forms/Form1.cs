@@ -17,27 +17,26 @@ namespace MillionareGame
 {
     public partial class Form1 : Form
     {
-        private GameService _gameService = new GameService();
+        private readonly GameService _gameService = new GameService();
         private UserService _userService = new UserService();
-        public Player _player;
+        public Player Player;
 
-        public static string _soundPath = System.IO.Path.GetFullPath("../../sounds/");
-        public WindowsMediaPlayer musicPlayer = new WindowsMediaPlayer();
+        public static string SoundPath = System.IO.Path.GetFullPath("../../sounds/");
+        public WindowsMediaPlayer MusicPlayer = new WindowsMediaPlayer();
 
         public Form1()
         {
             InitializeComponent();
 
-            musicPlayer.URL = musicPlayer.URL = _soundPath + "mainTheme.mp3";
-            musicPlayer.controls.play();
+            MusicService.StartMusic("mainTheme");
         }
 
         private void startGameButton_Click(object sender, EventArgs e)
         {
             var game = _gameService.StartGame();
 
-            var gameForm = new GameForm(game, musicPlayer, _soundPath);
-            musicPlayer.controls.stop();
+            var gameForm = new GameForm(game, MusicPlayer, SoundPath);
+            MusicService.StopMusic();
             gameForm.ShowDialog();
         }
 
@@ -61,7 +60,7 @@ namespace MillionareGame
 
         private void CheckIfPlayerLogged(object sender, EventArgs e)
         {
-            if (_player != null)
+            if (Player != null)
             {
                 loginButton.Hide();
                 registrationButton.Hide();
