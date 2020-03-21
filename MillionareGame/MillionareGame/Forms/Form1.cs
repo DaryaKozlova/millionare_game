@@ -21,9 +21,6 @@ namespace MillionareGame
         private UserService _userService = new UserService();
         public Player Player;
 
-        public static string SoundPath = System.IO.Path.GetFullPath("../../sounds/");
-        public WindowsMediaPlayer MusicPlayer = new WindowsMediaPlayer();
-
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +32,7 @@ namespace MillionareGame
         {
             var game = _gameService.StartGame();
 
-            var gameForm = new GameForm(game, MusicPlayer, SoundPath);
+            var gameForm = new GameForm(game);
             MusicService.StopMusic();
             gameForm.ShowDialog();
         }
@@ -64,6 +61,8 @@ namespace MillionareGame
             {
                 loginButton.Hide();
                 registrationButton.Hide();
+
+                hello_label.Text = $"Привет, {Player.Nickname}";
             }
         }
     }
