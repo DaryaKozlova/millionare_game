@@ -1,0 +1,17 @@
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csprojAssemblyReference.cache
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Form1.resources
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Properties.Resources.resources
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csproj.GenerateResource.cache
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\bin\Debug\MillionareGame.exe.config
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\bin\Debug\MillionareGame.exe
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\bin\Debug\MillionareGame.pdb
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csproj.CopyComplete
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.exe
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.pdb
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.GameForm.resources
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.RegistrationForm.resources
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.LoginForm.resources
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\Interop.WMPLib.dll
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csproj.ResolveComReference.cache
