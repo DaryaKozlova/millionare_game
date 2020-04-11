@@ -37,16 +37,21 @@
             // 
             // questionLabel
             // 
+            this.questionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.questionLabel.AutoEllipsis = true;
             this.questionLabel.AutoSize = true;
-            this.questionLabel.Location = new System.Drawing.Point(543, 216);
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Location = new System.Drawing.Point(574, 209);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(65, 17);
+            this.questionLabel.Size = new System.Drawing.Size(130, 32);
             this.questionLabel.TabIndex = 1;
             this.questionLabel.Text = "Question";
             // 
             // buttonAnswerA
             // 
-            this.buttonAnswerA.Location = new System.Drawing.Point(137, 341);
+            this.buttonAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerA.Location = new System.Drawing.Point(168, 341);
             this.buttonAnswerA.Name = "buttonAnswerA";
             this.buttonAnswerA.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerA.TabIndex = 2;
@@ -56,7 +61,8 @@
             // 
             // buttonAnswerB
             // 
-            this.buttonAnswerB.Location = new System.Drawing.Point(709, 341);
+            this.buttonAnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerB.Location = new System.Drawing.Point(776, 341);
             this.buttonAnswerB.Name = "buttonAnswerB";
             this.buttonAnswerB.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerB.TabIndex = 3;
@@ -66,7 +72,8 @@
             // 
             // buttonAnswerC
             // 
-            this.buttonAnswerC.Location = new System.Drawing.Point(137, 503);
+            this.buttonAnswerC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerC.Location = new System.Drawing.Point(168, 503);
             this.buttonAnswerC.Name = "buttonAnswerC";
             this.buttonAnswerC.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerC.TabIndex = 4;
@@ -76,7 +83,8 @@
             // 
             // buttonAnswerD
             // 
-            this.buttonAnswerD.Location = new System.Drawing.Point(709, 503);
+            this.buttonAnswerD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerD.Location = new System.Drawing.Point(776, 503);
             this.buttonAnswerD.Name = "buttonAnswerD";
             this.buttonAnswerD.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerD.TabIndex = 5;
@@ -88,6 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U;
             this.ClientSize = new System.Drawing.Size(1274, 720);
             this.Controls.Add(this.buttonAnswerD);
             this.Controls.Add(this.buttonAnswerC);
