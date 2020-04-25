@@ -18,6 +18,6 @@ namespace MillionareGame.DataAccess.Models
 
         public int AnsweredQuestionsCount { get; set; }
 
-        public string FailedQuestionId { get; set; }
+        public int TotalScore { get; set; }
     }
 }

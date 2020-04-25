@@ -40,26 +40,26 @@
             // 
             // questionLabel
             // 
-            this.questionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.questionLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.questionLabel.AutoEllipsis = true;
             this.questionLabel.AutoSize = true;
-            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionLabel.Location = new System.Drawing.Point(411, 215);
-            this.questionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.questionLabel.MaximumSize = new System.Drawing.Size(700, 400);
+            this.questionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.questionLabel.Location = new System.Drawing.Point(561, 109);
+            this.questionLabel.MaximumSize = new System.Drawing.Size(933, 492);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(99, 26);
+            this.questionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.questionLabel.Size = new System.Drawing.Size(139, 41);
             this.questionLabel.TabIndex = 1;
             this.questionLabel.Text = "Question";
+            this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonAnswerA
             // 
-            this.buttonAnswerA.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerA.Location = new System.Drawing.Point(186, 291);
-            this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerA.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerA.Location = new System.Drawing.Point(260, 262);
+            this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerA.Name = "buttonAnswerA";
-            this.buttonAnswerA.Size = new System.Drawing.Size(239, 53);
+            this.buttonAnswerA.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerA.TabIndex = 2;
             this.buttonAnswerA.Text = "A";
             this.buttonAnswerA.UseVisualStyleBackColor = true;
@@ -67,11 +67,11 @@
             // 
             // buttonAnswerB
             // 
-            this.buttonAnswerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerB.Location = new System.Drawing.Point(495, 291);
-            this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerB.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerB.Location = new System.Drawing.Point(672, 262);
+            this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerB.Name = "buttonAnswerB";
-            this.buttonAnswerB.Size = new System.Drawing.Size(239, 53);
+            this.buttonAnswerB.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerB.TabIndex = 3;
             this.buttonAnswerB.Text = "B";
             this.buttonAnswerB.UseVisualStyleBackColor = true;
@@ -79,11 +79,11 @@
             // 
             // buttonAnswerC
             // 
-            this.buttonAnswerC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerC.Location = new System.Drawing.Point(186, 375);
-            this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerC.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerC.Location = new System.Drawing.Point(260, 366);
+            this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerC.Name = "buttonAnswerC";
-            this.buttonAnswerC.Size = new System.Drawing.Size(239, 53);
+            this.buttonAnswerC.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerC.TabIndex = 4;
             this.buttonAnswerC.Text = "C";
             this.buttonAnswerC.UseVisualStyleBackColor = true;
@@ -91,11 +91,11 @@
             // 
             // buttonAnswerD
             // 
-            this.buttonAnswerD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerD.Location = new System.Drawing.Point(495, 375);
-            this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAnswerD.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerD.Location = new System.Drawing.Point(672, 366);
+            this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerD.Name = "buttonAnswerD";
-            this.buttonAnswerD.Size = new System.Drawing.Size(239, 53);
+            this.buttonAnswerD.Size = new System.Drawing.Size(319, 65);
             this.buttonAnswerD.TabIndex = 5;
             this.buttonAnswerD.Text = "D";
             this.buttonAnswerD.UseVisualStyleBackColor = true;
@@ -104,19 +104,20 @@
             // winningsLabel
             // 
             this.winningsLabel.AutoSize = true;
-            this.winningsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.winningsLabel.Location = new System.Drawing.Point(750, 44);
+            this.winningsLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.winningsLabel.Location = new System.Drawing.Point(522, 591);
+            this.winningsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.winningsLabel.Name = "winningsLabel";
-            this.winningsLabel.Size = new System.Drawing.Size(93, 24);
+            this.winningsLabel.Size = new System.Drawing.Size(138, 38);
             this.winningsLabel.TabIndex = 6;
             this.winningsLabel.Text = "Выигрыш";
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U;
-            this.ClientSize = new System.Drawing.Size(956, 585);
+            this.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U1;
+            this.ClientSize = new System.Drawing.Size(1275, 720);
             this.Controls.Add(this.winningsLabel);
             this.Controls.Add(this.buttonAnswerD);
             this.Controls.Add(this.buttonAnswerC);
@@ -124,7 +125,7 @@
             this.Controls.Add(this.buttonAnswerA);
             this.Controls.Add(this.questionLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GameForm";
             this.Text = "GameForm";
             this.ResumeLayout(false);

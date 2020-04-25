@@ -53,6 +53,7 @@
     <Compile Include="DataAccess\Models\Game.cs" />
     <Compile Include="DataAccess\Models\Player.cs" />
     <Compile Include="DataAccess\Models\Question.cs" />
+    <Compile Include="DataAccess\Repositories\GameRepository.cs" />
     <Compile Include="DataAccess\Repositories\QuestionsRepository.cs" />
     <Compile Include="DataAccess\Repositories\UserRepository.cs" />
     <Compile Include="Forms\Form1.cs">
@@ -146,6 +147,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\LHc0RaYGI3U.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\LHc0RaYGI3U1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\gamejpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\btm1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,8 @@ namespace MillionareGame.Services
     public class GameService
     {
         private QuestionsRepository _questionsRepository = new QuestionsRepository();
+        private UserRepository _userRepository = new UserRepository();
+        private GameRepository _gameRepository = new GameRepository();
 
         public Game StartGame()
         {
@@ -27,6 +29,21 @@ namespace MillionareGame.Services
             // запись игры в файл рЕШИТЬ ЧТО ДЕЛАТЬ
 
             return game;
-        } 
+        }
+
+        public List<Game> GetPlayerGames(string playerId)
+        {
+            var games =_gameRepository.GetAllGames();
+
+            var playerGames = games.Where(game => game.UserId == playerId).ToList();
+
+            return playerGames;
+        }
+
+        public void SaveResult(Player player, Game game)
+        {
+            _userRepository.UpdatePlayer(player, game);
+            _gameRepository.SaveGame(game);
+        }
     }
 }

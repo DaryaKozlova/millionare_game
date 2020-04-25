@@ -10,6 +10,8 @@ namespace MillionareGame.Forms
     public partial class GameForm : Form
     {
         private Game _game;
+        private Player _player;
+        private readonly GameService _gameService = new GameService();
         private int _currentQuestion;
 
         private int[] winnings =
@@ -17,16 +19,17 @@ namespace MillionareGame.Forms
             0, 500, 1000, 3000, 5000, 10000, 15000, 25000, 50000, 100000, 200000, 400000, 800000, 1500000, 3000000
         };
 
-        public GameForm(Game game)
+        public GameForm(Game game, Player player)
         {
             InitializeComponent();
 
-            StartGame(game);
+            StartGame(game, player);
         }
 
-        public void StartGame(Game game)
+        public void StartGame(Game game, Player player)
         {
             _game = game;
+            _player = player;
             _currentQuestion = game.AnsweredQuestionsCount;
 
             winningsLabel.Text = $@"Текущий выигрыш: {winnings[_currentQuestion]}$";
@@ -36,6 +39,15 @@ namespace MillionareGame.Forms
         public void StopGame()
         {
             MusicService.StopMusic();
+            if (_player != null)
+            {
+                _game.TotalScore = winnings[_currentQuestion];
+                _game.AnsweredQuestionsCount = _currentQuestion;
+                _game.UserId = _player.Id;
+
+                _gameService.SaveResult(_player, _game);
+            }
+
             Close();
         }
 
@@ -156,5 +168,6 @@ namespace MillionareGame.Forms
 
             ShowRightAnswer("4");
         }
+
     }
 }

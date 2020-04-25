@@ -63,9 +63,39 @@ namespace MillionareGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btm1 {
+            get {
+                object obj = ResourceManager.GetObject("btm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gamejpg {
+            get {
+                object obj = ResourceManager.GetObject("gamejpg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LHc0RaYGI3U {
             get {
                 object obj = ResourceManager.GetObject("LHc0RaYGI3U", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LHc0RaYGI3U1 {
+            get {
+                object obj = ResourceManager.GetObject("LHc0RaYGI3U1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

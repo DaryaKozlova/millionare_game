@@ -98,12 +98,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(383, 247);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.nicknameTextBox);
             this.Controls.Add(this.passwordLable);
             this.Controls.Add(this.nicknameLabel);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

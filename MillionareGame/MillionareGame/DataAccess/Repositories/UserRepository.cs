@@ -20,20 +20,24 @@ namespace MillionareGame.DataAccess.Repositories
             if (!players.Exists(existPlayer => existPlayer.Nickname == player.Nickname))
             {
                 players.Add(player);
+            }
+            else
+            {
+                var playerIndex = players.FindIndex(existPlayer => existPlayer.Nickname == player.Nickname);
 
-                File.WriteAllText(_filePath,JsonConvert.SerializeObject(players));
-
-                return player;
+                players[playerIndex] = player;
             }
 
-            return null;
+            File.WriteAllText(_filePath, JsonConvert.SerializeObject(players));
+
+            return player;
         }
 
         public Player FindPlayer(string nickname)
         {
             var players = GetAllPlayers();
 
-            var player = players.Find(p => p.Nickname == nickname);
+            var player = players.FirstOrDefault(p => p.Nickname == nickname);
 
             return player;
         }
@@ -56,6 +60,21 @@ namespace MillionareGame.DataAccess.Repositories
             return users;
         }
 
-        
+        public bool UpdatePlayer(Player player, Game game)
+        {   
+            var playerEntry = FindPlayer(player.Nickname);
+
+            if (playerEntry != null)
+            {
+                playerEntry.PlayedGamesCount++;
+                playerEntry.TotalScore += game.TotalScore;
+
+                SavePlayer(playerEntry);
+
+                return true;
+            }
+
+            return false;
+        }
     }
 }

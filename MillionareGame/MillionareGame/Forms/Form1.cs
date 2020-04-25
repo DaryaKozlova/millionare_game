@@ -32,7 +32,7 @@ namespace MillionareGame
         {
             var game = _gameService.StartGame();
 
-            var gameForm = new GameForm(game);
+            var gameForm = new GameForm(game, Player);
             MusicService.StopMusic();
             Hide();
             gameForm.ShowDialog();
@@ -64,9 +64,30 @@ namespace MillionareGame
             {
                 loginButton.Hide();
                 registrationButton.Hide();
+                var games = _gameService.GetPlayerGames(Player.Id);
+                games.ForEach(delegate(Game game)
+                    {
+                        playerGames.Items.Add(new ListViewGame
+                        {
+                            AnsweredQuestions = game.AnsweredQuestionsCount.ToString(),
+                            TotalScore = game.TotalScore.ToString()
+                        });
+                    });
+                playerGames.Show();
 
                 hello_label.Text = $"Привет, {Player.Nickname}";
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private class ListViewGame : ListViewItem
+        {
+            public string AnsweredQuestions { get; set; }
+            public string TotalScore { get; set; }
         }
     }
 }
