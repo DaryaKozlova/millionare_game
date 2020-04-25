@@ -72,12 +72,12 @@
             this.hello_label.AutoSize = true;
             this.hello_label.Location = new System.Drawing.Point(51, 39);
             this.hello_label.Name = "hello_label";
-            this.hello_label.Size = new System.Drawing.Size(0, 39);
+            this.hello_label.Size = new System.Drawing.Size(0, 30);
             this.hello_label.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MillionareGame.Properties.Resources.mainMenuBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -93,6 +93,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Main menu";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

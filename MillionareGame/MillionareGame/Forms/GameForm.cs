@@ -12,6 +12,11 @@ namespace MillionareGame.Forms
         private Game _game;
         private int _currentQuestion;
 
+        private int[] winnings =
+        {
+            0, 500, 1000, 3000, 5000, 10000, 15000, 25000, 50000, 100000, 200000, 400000, 800000, 1500000, 3000000
+        };
+
         public GameForm(Game game)
         {
             InitializeComponent();
@@ -24,6 +29,7 @@ namespace MillionareGame.Forms
             _game = game;
             _currentQuestion = game.AnsweredQuestionsCount;
 
+            winningsLabel.Text = $@"Текущий выигрыш: {winnings[_currentQuestion]}$";
             LoadQuestion(_currentQuestion);
         }
 
@@ -48,12 +54,22 @@ namespace MillionareGame.Forms
             buttonAnswerC.BackColor = default;
             buttonAnswerD.BackColor = default;
 
+            buttonAnswerA.Enabled = true;
+            buttonAnswerB.Enabled = true;
+            buttonAnswerC.Enabled = true;
+            buttonAnswerD.Enabled = true;
+
             MusicService.StartMusic("questionThreeMusic");
         }
 
         private async void ShowRightAnswer(string clickedButton)
         {
             MusicService.StartMusic("buttonWaitAnswer");
+
+            buttonAnswerA.Enabled = false;
+            buttonAnswerB.Enabled = false;
+            buttonAnswerC.Enabled = false;
+            buttonAnswerD.Enabled = false;
 
             await Task.Delay(4000);
          
@@ -89,11 +105,30 @@ namespace MillionareGame.Forms
 
             if (question.AnswerId == clickedButton)
             {
-                LoadQuestion(++_currentQuestion);
+                ++_currentQuestion;
+
+                if (_currentQuestion == _game.Questions.Count)
+                {
+                    var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
+                    if (messageBox == DialogResult.OK)
+                    {
+                        StopGame();
+                    }
+                }
+                else
+                {
+                    winningsLabel.Text = $@"Текущий выигрыш: {winnings[_currentQuestion]}$";
+                    LoadQuestion(_currentQuestion);
+                }
             }
             else
             {
-                StopGame();
+                var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
+
+                if (messageBox == DialogResult.OK)
+                {
+                    StopGame();
+                }
             }
         }
 

@@ -34,7 +34,10 @@ namespace MillionareGame
 
             var gameForm = new GameForm(game);
             MusicService.StopMusic();
+            Hide();
             gameForm.ShowDialog();
+            Show();
+            MusicService.StartMusic("mainTheme");
         }
 
         private void registrationButton_Click(object sender, EventArgs e)
