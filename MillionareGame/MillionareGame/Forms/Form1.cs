@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -33,10 +34,15 @@ namespace MillionareGame
             var game = _gameService.StartGame();
 
             var gameForm = new GameForm(game, Player);
+
             MusicService.StopMusic();
             Hide();
+
             gameForm.ShowDialog();
+
+            if (Player != null) RefreshScoreTable();
             Show();
+
             MusicService.StartMusic("mainTheme");
         }
 
@@ -64,19 +70,36 @@ namespace MillionareGame
             {
                 loginButton.Hide();
                 registrationButton.Hide();
-                var games = _gameService.GetPlayerGames(Player.Id);
-                games.ForEach(delegate(Game game)
-                    {
-                        playerGames.Items.Add(new ListViewGame
-                        {
-                            AnsweredQuestions = game.AnsweredQuestionsCount.ToString(),
-                            TotalScore = game.TotalScore.ToString()
-                        });
-                    });
+
+                RefreshScoreTable();
+
                 playerGames.Show();
+                logoutButton.Show();
 
                 hello_label.Text = $"Привет, {Player.Nickname}";
             }
+
+            if (Player == null)
+            {
+                loginButton.Show();
+                registrationButton.Show();
+
+                playerGames.Hide();
+                logoutButton.Hide();
+                hello_label.Text = "";
+            }
+        }
+
+        private void RefreshScoreTable()
+        {
+            var games = _gameService.GetPlayerGames(Player.Id);
+
+            playerGames.Items.Clear();
+            games.ForEach(delegate (Game game)
+            {
+                var values = new[] { game.AnsweredQuestionsCount.ToString(), game.TotalScore.ToString() };
+                playerGames.Items.Add(new ListViewItem(values));
+            });
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -84,10 +107,10 @@ namespace MillionareGame
 
         }
 
-        private class ListViewGame : ListViewItem
+        private void logoutButton_Click(object sender, EventArgs e)
         {
-            public string AnsweredQuestions { get; set; }
-            public string TotalScore { get; set; }
+            Player = null;
+            CheckIfPlayerLogged(sender, e);
         }
     }
 }

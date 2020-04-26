@@ -13,6 +13,9 @@ namespace MillionareGame.Forms
         private Player _player;
         private readonly GameService _gameService = new GameService();
         private int _currentQuestion;
+        private Timer timer = new Timer();
+        private static int GameTime = 30;
+        private static int timerInterval = 1000;
 
         private int[] winnings =
         {
@@ -31,6 +34,8 @@ namespace MillionareGame.Forms
             _game = game;
             _player = player;
             _currentQuestion = game.AnsweredQuestionsCount;
+            timer.Tick += timer_Tick;
+            timer.Interval = timerInterval;
 
             winningsLabel.Text = $@"Текущий выигрыш: {winnings[_currentQuestion]}$";
             LoadQuestion(_currentQuestion);
@@ -72,10 +77,14 @@ namespace MillionareGame.Forms
             buttonAnswerD.Enabled = true;
 
             MusicService.StartMusic("questionThreeMusic");
+
+            timerLabel.Text = GameTime.ToString();
+            timer.Start();
         }
 
         private async void ShowRightAnswer(string clickedButton)
         {
+            timer.Stop();
             MusicService.StartMusic("buttonWaitAnswer");
 
             buttonAnswerA.Enabled = false;
@@ -118,20 +127,7 @@ namespace MillionareGame.Forms
             if (question.AnswerId == clickedButton)
             {
                 ++_currentQuestion;
-
-                if (_currentQuestion == _game.Questions.Count)
-                {
-                    var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
-                    if (messageBox == DialogResult.OK)
-                    {
-                        StopGame();
-                    }
-                }
-                else
-                {
-                    winningsLabel.Text = $@"Текущий выигрыш: {winnings[_currentQuestion]}$";
-                    LoadQuestion(_currentQuestion);
-                }
+                CheckGameEnd();
             }
             else
             {
@@ -169,5 +165,55 @@ namespace MillionareGame.Forms
             ShowRightAnswer("4");
         }
 
+        private void questionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            var currTime = int.Parse(timerLabel.Text);
+
+            if (currTime == 0)
+            {
+                timer.Stop();
+                CheckGameEnd();
+            }
+            else
+            {
+                currTime--;
+                timerLabel.Text = currTime.ToString();
+            }
+        }
+
+        private void CheckGameEnd()
+        {
+            var currTime = int.Parse(timerLabel.Text);
+
+            if (currTime == 0)
+            {
+                var messageBox = MessageBox.Show($@"Время на ответ закончилось. Вы выиграли {winnings[_currentQuestion]} рублей!");
+                if (messageBox == DialogResult.OK)
+                {
+                    StopGame();
+                }
+            }
+            else
+            {
+                if (_currentQuestion == _game.Questions.Count)
+                {
+                    var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
+                    if (messageBox == DialogResult.OK)
+                    {
+                        StopGame();
+                    }
+                }
+                else
+                {
+                    winningsLabel.Text = $@"Текущий выигрыш: {winnings[_currentQuestion]}$";
+                    LoadQuestion(_currentQuestion);
+                }
+            }
+        }
     }
 }

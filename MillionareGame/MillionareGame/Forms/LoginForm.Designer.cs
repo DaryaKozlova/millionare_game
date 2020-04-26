@@ -66,6 +66,7 @@
             this.nicknameTextBox.Name = "nicknameTextBox";
             this.nicknameTextBox.Size = new System.Drawing.Size(228, 22);
             this.nicknameTextBox.TabIndex = 1;
+            this.nicknameTextBox.Text = "Dasha";
             // 
             // passwordTextBox
             // 
@@ -73,8 +74,10 @@
             this.passwordTextBox.Location = new System.Drawing.Point(111, 107);
             this.passwordTextBox.MaxLength = 64;
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(228, 22);
             this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.Text = "123";
             // 
             // logButton
             // 
@@ -82,7 +85,7 @@
             this.logButton.Location = new System.Drawing.Point(38, 162);
             this.logButton.Name = "logButton";
             this.logButton.Size = new System.Drawing.Size(301, 34);
-            this.logButton.TabIndex = 3;
+            this.logButton.TabIndex = 1;
             this.logButton.Text = "Log in";
             this.logButton.UseVisualStyleBackColor = true;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);

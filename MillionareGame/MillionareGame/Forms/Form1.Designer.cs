@@ -35,6 +35,7 @@
             this.playerGames = new System.Windows.Forms.ListView();
             this.AnsweredQuestions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.logoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startGameButton
@@ -92,27 +93,50 @@
             // 
             // playerGames
             // 
+            this.playerGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.playerGames.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U1;
             this.playerGames.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.AnsweredQuestions,
             this.TotalScore});
-            this.playerGames.Location = new System.Drawing.Point(12, 12);
+            this.playerGames.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerGames.ForeColor = System.Drawing.SystemColors.Window;
+            this.playerGames.FullRowSelect = true;
+            this.playerGames.GridLines = true;
+            this.playerGames.HideSelection = false;
+            this.playerGames.Location = new System.Drawing.Point(24, 132);
             this.playerGames.Name = "playerGames";
-            this.playerGames.Size = new System.Drawing.Size(385, 726);
+            this.playerGames.Size = new System.Drawing.Size(434, 606);
             this.playerGames.TabIndex = 4;
             this.playerGames.UseCompatibleStateImageBehavior = false;
+            this.playerGames.View = System.Windows.Forms.View.Details;
             this.playerGames.Visible = false;
             // 
             // AnsweredQuestions
             // 
             this.AnsweredQuestions.Text = "Answered questions";
-            this.AnsweredQuestions.Width = 200;
+            this.AnsweredQuestions.Width = 199;
             // 
             // TotalScore
             // 
             this.TotalScore.Text = "Total score";
             this.TotalScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TotalScore.Width = 200;
+            this.TotalScore.Width = 230;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.BackgroundImage = global::MillionareGame.Properties.Resources.btm1;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutButton.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.logoutButton.ForeColor = System.Drawing.Color.SeaShell;
+            this.logoutButton.Location = new System.Drawing.Point(942, 134);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(7);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(351, 80);
+            this.logoutButton.TabIndex = 5;
+            this.logoutButton.Text = "LOG OUT";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Visible = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // Form1
             // 
@@ -121,6 +145,7 @@
             this.BackgroundImage = global::MillionareGame.Properties.Resources.mainMenuBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1309, 750);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.playerGames);
             this.Controls.Add(this.hello_label);
             this.Controls.Add(this.loginButton);
@@ -148,6 +173,7 @@
         private System.Windows.Forms.ListView playerGames;
         private System.Windows.Forms.ColumnHeader AnsweredQuestions;
         private System.Windows.Forms.ColumnHeader TotalScore;
+        private System.Windows.Forms.Button logoutButton;
     }
 }
 

@@ -28,30 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.questionLabel = new System.Windows.Forms.Label();
             this.buttonAnswerA = new System.Windows.Forms.Button();
             this.buttonAnswerB = new System.Windows.Forms.Button();
             this.buttonAnswerC = new System.Windows.Forms.Button();
             this.buttonAnswerD = new System.Windows.Forms.Button();
             this.winningsLabel = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.timerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // questionLabel
             // 
-            this.questionLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.questionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.questionLabel.AutoEllipsis = true;
             this.questionLabel.AutoSize = true;
             this.questionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.Location = new System.Drawing.Point(561, 109);
-            this.questionLabel.MaximumSize = new System.Drawing.Size(933, 492);
+            this.questionLabel.MaximumSize = new System.Drawing.Size(900, 492);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.questionLabel.Size = new System.Drawing.Size(139, 41);
             this.questionLabel.TabIndex = 1;
             this.questionLabel.Text = "Question";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionLabel.Click += new System.EventHandler(this.questionLabel_Click);
             // 
             // buttonAnswerA
             // 
@@ -112,12 +114,30 @@
             this.winningsLabel.TabIndex = 6;
             this.winningsLabel.Text = "Выигрыш";
             // 
+            // timerLabel
+            // 
+            this.timerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.timerLabel.AutoEllipsis = true;
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.Location = new System.Drawing.Point(12, 9);
+            this.timerLabel.MaximumSize = new System.Drawing.Size(900, 492);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.timerLabel.Size = new System.Drawing.Size(93, 41);
+            this.timerLabel.TabIndex = 7;
+            this.timerLabel.Text = "Timer";
+            this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U1;
             this.ClientSize = new System.Drawing.Size(1275, 720);
+            this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.winningsLabel);
             this.Controls.Add(this.buttonAnswerD);
             this.Controls.Add(this.buttonAnswerC);
@@ -141,6 +161,6 @@
         private System.Windows.Forms.Button buttonAnswerC;
         private System.Windows.Forms.Button buttonAnswerD;
         private System.Windows.Forms.Label winningsLabel;
-        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Label timerLabel;
     }
 }
