@@ -40,12 +40,14 @@
             // 
             // registerButton
             // 
-            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(40, 135);
+            this.registerButton.BackgroundImage = global::MillionareGame.Properties.Resources.btm1;
+            this.registerButton.Font = new System.Drawing.Font("Yu Gothic UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.ForeColor = System.Drawing.Color.SeaShell;
+            this.registerButton.Location = new System.Drawing.Point(146, 201);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(193, 34);
+            this.registerButton.Size = new System.Drawing.Size(193, 50);
             this.registerButton.TabIndex = 8;
-            this.registerButton.Text = "Register";
+            this.registerButton.Text = "REGISTER";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             this.registerButton.Validating += new System.ComponentModel.CancelEventHandler(this.registerButton_Validating);
@@ -53,40 +55,43 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(113, 76);
+            this.passwordTextBox.Location = new System.Drawing.Point(232, 128);
             this.passwordTextBox.MaxLength = 10;
+            this.passwordTextBox.Multiline = true;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(120, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(149, 31);
             this.passwordTextBox.TabIndex = 7;
             // 
             // nicknameTextBox
             // 
             this.nicknameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nicknameTextBox.Location = new System.Drawing.Point(113, 33);
+            this.nicknameTextBox.Location = new System.Drawing.Point(232, 88);
             this.nicknameTextBox.MaxLength = 10;
+            this.nicknameTextBox.Multiline = true;
             this.nicknameTextBox.Name = "nicknameTextBox";
-            this.nicknameTextBox.Size = new System.Drawing.Size(120, 22);
+            this.nicknameTextBox.Size = new System.Drawing.Size(149, 31);
             this.nicknameTextBox.TabIndex = 5;
             // 
             // passwordLable
             // 
             this.passwordLable.AutoSize = true;
-            this.passwordLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLable.Location = new System.Drawing.Point(37, 76);
+            this.passwordLable.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLable.Location = new System.Drawing.Point(87, 127);
             this.passwordLable.Name = "passwordLable";
-            this.passwordLable.Size = new System.Drawing.Size(69, 17);
+            this.passwordLable.Size = new System.Drawing.Size(139, 32);
             this.passwordLable.TabIndex = 4;
-            this.passwordLable.Text = "Password";
+            this.passwordLable.Text = "PASSWORD";
             // 
             // nicknameLabel
             // 
             this.nicknameLabel.AutoSize = true;
-            this.nicknameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nicknameLabel.Location = new System.Drawing.Point(37, 33);
+            this.nicknameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nicknameLabel.ForeColor = System.Drawing.Color.Black;
+            this.nicknameLabel.Location = new System.Drawing.Point(87, 87);
             this.nicknameLabel.Name = "nicknameLabel";
-            this.nicknameLabel.Size = new System.Drawing.Size(70, 17);
+            this.nicknameLabel.Size = new System.Drawing.Size(135, 32);
             this.nicknameLabel.TabIndex = 6;
-            this.nicknameLabel.Text = "Nickname";
+            this.nicknameLabel.Text = "NICKNAME";
             // 
             // errorProvider
             // 
@@ -99,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(306, 197);
+            this.ClientSize = new System.Drawing.Size(481, 315);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.nicknameTextBox);
@@ -111,7 +116,6 @@
             this.Name = "RegistrationForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "RegistrationForm";
-            this.Load += new System.EventHandler(this.RegistrationForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -60,5 +60,6 @@ namespace MillionareGame.Forms
                 errorProvider.SetError(nicknameTextBox, "Введите ваше имя пользователя.");
             }
         }
+
     }
 }

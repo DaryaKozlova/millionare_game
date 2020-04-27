@@ -58,10 +58,5 @@ namespace MillionareGame.Forms
 
             }
         }
-
-        private void RegistrationForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

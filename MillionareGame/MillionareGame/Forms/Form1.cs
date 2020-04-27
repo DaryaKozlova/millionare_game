@@ -112,5 +112,6 @@ namespace MillionareGame
             Player = null;
             CheckIfPlayerLogged(sender, e);
         }
+
     }
 }

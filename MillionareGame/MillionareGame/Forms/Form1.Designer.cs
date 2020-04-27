@@ -98,14 +98,14 @@
             this.playerGames.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.AnsweredQuestions,
             this.TotalScore});
-            this.playerGames.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerGames.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerGames.ForeColor = System.Drawing.SystemColors.Window;
             this.playerGames.FullRowSelect = true;
             this.playerGames.GridLines = true;
             this.playerGames.HideSelection = false;
-            this.playerGames.Location = new System.Drawing.Point(24, 132);
+            this.playerGames.Location = new System.Drawing.Point(12, 404);
             this.playerGames.Name = "playerGames";
-            this.playerGames.Size = new System.Drawing.Size(434, 606);
+            this.playerGames.Size = new System.Drawing.Size(472, 334);
             this.playerGames.TabIndex = 4;
             this.playerGames.UseCompatibleStateImageBehavior = false;
             this.playerGames.View = System.Windows.Forms.View.Details;
@@ -114,7 +114,7 @@
             // AnsweredQuestions
             // 
             this.AnsweredQuestions.Text = "Answered questions";
-            this.AnsweredQuestions.Width = 199;
+            this.AnsweredQuestions.Width = 237;
             // 
             // TotalScore
             // 
