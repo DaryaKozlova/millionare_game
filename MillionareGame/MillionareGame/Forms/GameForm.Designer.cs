@@ -39,17 +39,15 @@
             // 
             // questionLabel
             // 
-            this.questionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.questionLabel.AutoEllipsis = true;
-            this.questionLabel.AutoSize = true;
+            this.questionLabel.BackColor = System.Drawing.Color.Black;
             this.questionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.questionLabel.Location = new System.Drawing.Point(561, 109);
-            this.questionLabel.MaximumSize = new System.Drawing.Size(900, 492);
+            this.questionLabel.ForeColor = System.Drawing.Color.SeaShell;
+            this.questionLabel.Location = new System.Drawing.Point(12, 70);
+            this.questionLabel.MaximumSize = new System.Drawing.Size(1400, 492);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.questionLabel.Size = new System.Drawing.Size(139, 41);
+            this.questionLabel.Size = new System.Drawing.Size(1251, 173);
             this.questionLabel.TabIndex = 1;
             this.questionLabel.Text = "Question";
             this.questionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,10 +56,10 @@
             // buttonAnswerA
             // 
             this.buttonAnswerA.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerA.Location = new System.Drawing.Point(260, 262);
+            this.buttonAnswerA.Location = new System.Drawing.Point(142, 325);
             this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerA.Name = "buttonAnswerA";
-            this.buttonAnswerA.Size = new System.Drawing.Size(319, 65);
+            this.buttonAnswerA.Size = new System.Drawing.Size(450, 65);
             this.buttonAnswerA.TabIndex = 2;
             this.buttonAnswerA.Text = "A";
             this.buttonAnswerA.UseVisualStyleBackColor = true;
@@ -70,10 +68,10 @@
             // buttonAnswerB
             // 
             this.buttonAnswerB.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerB.Location = new System.Drawing.Point(672, 262);
+            this.buttonAnswerB.Location = new System.Drawing.Point(685, 325);
             this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerB.Name = "buttonAnswerB";
-            this.buttonAnswerB.Size = new System.Drawing.Size(319, 65);
+            this.buttonAnswerB.Size = new System.Drawing.Size(450, 65);
             this.buttonAnswerB.TabIndex = 3;
             this.buttonAnswerB.Text = "B";
             this.buttonAnswerB.UseVisualStyleBackColor = true;
@@ -82,10 +80,10 @@
             // buttonAnswerC
             // 
             this.buttonAnswerC.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerC.Location = new System.Drawing.Point(260, 366);
+            this.buttonAnswerC.Location = new System.Drawing.Point(142, 429);
             this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerC.Name = "buttonAnswerC";
-            this.buttonAnswerC.Size = new System.Drawing.Size(319, 65);
+            this.buttonAnswerC.Size = new System.Drawing.Size(450, 65);
             this.buttonAnswerC.TabIndex = 4;
             this.buttonAnswerC.Text = "C";
             this.buttonAnswerC.UseVisualStyleBackColor = true;
@@ -94,10 +92,10 @@
             // buttonAnswerD
             // 
             this.buttonAnswerD.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnswerD.Location = new System.Drawing.Point(672, 366);
+            this.buttonAnswerD.Location = new System.Drawing.Point(685, 429);
             this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerD.Name = "buttonAnswerD";
-            this.buttonAnswerD.Size = new System.Drawing.Size(319, 65);
+            this.buttonAnswerD.Size = new System.Drawing.Size(450, 65);
             this.buttonAnswerD.TabIndex = 5;
             this.buttonAnswerD.Text = "D";
             this.buttonAnswerD.UseVisualStyleBackColor = true;
@@ -105,14 +103,16 @@
             // 
             // winningsLabel
             // 
-            this.winningsLabel.AutoSize = true;
+            this.winningsLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.winningsLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.winningsLabel.Location = new System.Drawing.Point(522, 591);
+            this.winningsLabel.ForeColor = System.Drawing.Color.SeaShell;
+            this.winningsLabel.Location = new System.Drawing.Point(436, 638);
             this.winningsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.winningsLabel.Name = "winningsLabel";
-            this.winningsLabel.Size = new System.Drawing.Size(138, 38);
+            this.winningsLabel.Size = new System.Drawing.Size(394, 38);
             this.winningsLabel.TabIndex = 6;
             this.winningsLabel.Text = "Выигрыш";
+            this.winningsLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // timerLabel
             // 
@@ -121,7 +121,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.timerLabel.AutoEllipsis = true;
             this.timerLabel.AutoSize = true;
+            this.timerLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.timerLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.ForeColor = System.Drawing.Color.SeaShell;
             this.timerLabel.Location = new System.Drawing.Point(12, 9);
             this.timerLabel.MaximumSize = new System.Drawing.Size(900, 492);
             this.timerLabel.Name = "timerLabel";

@@ -21,6 +21,7 @@ namespace MillionareGame.Forms
         public LoginForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void logButton_Click(object sender, EventArgs e)

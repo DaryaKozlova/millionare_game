@@ -18,6 +18,7 @@ namespace MillionareGame.Forms
         public RegistrationForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void registerButton_Click(object sender, EventArgs e)

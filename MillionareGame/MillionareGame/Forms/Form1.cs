@@ -27,6 +27,9 @@ namespace MillionareGame
             InitializeComponent();
 
             MusicService.StartMusic("mainTheme");
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.hello_label.BackColor = System.Drawing.Color.Transparent;
+
         }
 
         private void startGameButton_Click(object sender, EventArgs e)
@@ -76,7 +79,8 @@ namespace MillionareGame
                 playerGames.Show();
                 logoutButton.Show();
 
-                hello_label.Text = $"Привет, {Player.Nickname}";
+                
+                hello_label.Text = $"HELLO, {Player.Nickname}";
             }
 
             if (Player == null)
@@ -95,16 +99,11 @@ namespace MillionareGame
             var games = _gameService.GetPlayerGames(Player.Id);
 
             playerGames.Items.Clear();
-            games.ForEach(delegate (Game game)
+            games.OrderByDescending(game => game.DateTime).ToList().ForEach(delegate (Game game)
             {
-                var values = new[] { game.AnsweredQuestionsCount.ToString(), game.TotalScore.ToString() };
+                var values = new[] { game.DateTime.ToLongDateString(), game.AnsweredQuestionsCount.ToString(), game.TotalScore.ToString() };
                 playerGames.Items.Add(new ListViewItem(values));
             });
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -113,5 +112,14 @@ namespace MillionareGame
             CheckIfPlayerLogged(sender, e);
         }
 
+        private void playerGames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.AnsweredQuestions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.logoutButton = new System.Windows.Forms.Button();
+            this.DATE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // startGameButton
@@ -86,9 +87,12 @@
             // hello_label
             // 
             this.hello_label.AutoSize = true;
-            this.hello_label.Location = new System.Drawing.Point(51, 39);
+            this.hello_label.BackColor = System.Drawing.Color.Black;
+            this.hello_label.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 25F, System.Drawing.FontStyle.Bold);
+            this.hello_label.ForeColor = System.Drawing.Color.SeaShell;
+            this.hello_label.Location = new System.Drawing.Point(4, 9);
             this.hello_label.Name = "hello_label";
-            this.hello_label.Size = new System.Drawing.Size(0, 39);
+            this.hello_label.Size = new System.Drawing.Size(0, 57);
             this.hello_label.TabIndex = 3;
             // 
             // playerGames
@@ -96,31 +100,32 @@
             this.playerGames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.playerGames.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U1;
             this.playerGames.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DATE,
             this.AnsweredQuestions,
             this.TotalScore});
-            this.playerGames.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerGames.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerGames.ForeColor = System.Drawing.SystemColors.Window;
             this.playerGames.FullRowSelect = true;
             this.playerGames.GridLines = true;
             this.playerGames.HideSelection = false;
-            this.playerGames.Location = new System.Drawing.Point(12, 404);
+            this.playerGames.Location = new System.Drawing.Point(12, 463);
             this.playerGames.Name = "playerGames";
-            this.playerGames.Size = new System.Drawing.Size(472, 334);
+            this.playerGames.Size = new System.Drawing.Size(485, 275);
             this.playerGames.TabIndex = 4;
             this.playerGames.UseCompatibleStateImageBehavior = false;
             this.playerGames.View = System.Windows.Forms.View.Details;
             this.playerGames.Visible = false;
+            this.playerGames.SelectedIndexChanged += new System.EventHandler(this.playerGames_SelectedIndexChanged);
             // 
             // AnsweredQuestions
             // 
-            this.AnsweredQuestions.Text = "Answered questions";
-            this.AnsweredQuestions.Width = 237;
+            this.AnsweredQuestions.Text = "ANSWERS";
+            this.AnsweredQuestions.Width = 120;
             // 
             // TotalScore
             // 
-            this.TotalScore.Text = "Total score";
-            this.TotalScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TotalScore.Width = 230;
+            this.TotalScore.Text = "TOTAL SCORE";
+            this.TotalScore.Width = 160;
             // 
             // logoutButton
             // 
@@ -137,6 +142,11 @@
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Visible = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // DATE
+            // 
+            this.DATE.Text = "DATE";
+            this.DATE.Width = 200;
             // 
             // Form1
             // 
@@ -174,6 +184,7 @@
         private System.Windows.Forms.ColumnHeader AnsweredQuestions;
         private System.Windows.Forms.ColumnHeader TotalScore;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.ColumnHeader DATE;
     }
 }
 

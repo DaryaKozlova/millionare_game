@@ -27,6 +27,10 @@ namespace MillionareGame.Forms
             InitializeComponent();
 
             StartGame(game, player);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.questionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.timerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.winningsLabel.BackColor = System.Drawing.Color.Transparent;
         }
 
         public void StartGame(Game game, Player player)
@@ -61,10 +65,10 @@ namespace MillionareGame.Forms
             var question = _game.Questions[questionNumber];
             questionLabel.Text = question.QuestionText;
 
-            buttonAnswerA.Text = question.Variants[0].Text;
-            buttonAnswerB.Text = question.Variants[1].Text;
-            buttonAnswerC.Text = question.Variants[2].Text;
-            buttonAnswerD.Text = question.Variants[3].Text;
+            buttonAnswerA.Text = "A: " + question.Variants[0].Text;
+            buttonAnswerB.Text = "B: " + question.Variants[1].Text;
+            buttonAnswerC.Text = "C: " + question.Variants[2].Text;
+            buttonAnswerD.Text = "D: " + question.Variants[3].Text;
 
             buttonAnswerA.BackColor = default;
             buttonAnswerB.BackColor = default;
