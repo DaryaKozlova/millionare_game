@@ -157,5 +157,17 @@
   <ItemGroup>
     <None Include="images\btm1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icons\man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icons\call.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\icons\fifty.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

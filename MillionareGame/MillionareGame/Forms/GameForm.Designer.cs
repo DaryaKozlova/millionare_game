@@ -35,6 +35,9 @@
             this.buttonAnswerD = new System.Windows.Forms.Button();
             this.winningsLabel = new System.Windows.Forms.Label();
             this.timerLabel = new System.Windows.Forms.Label();
+            this.manButton = new System.Windows.Forms.Button();
+            this.callButton = new System.Windows.Forms.Button();
+            this.fiftyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // questionLabel
@@ -106,10 +109,10 @@
             this.winningsLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.winningsLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.winningsLabel.ForeColor = System.Drawing.Color.SeaShell;
-            this.winningsLabel.Location = new System.Drawing.Point(436, 638);
+            this.winningsLabel.Location = new System.Drawing.Point(135, 620);
             this.winningsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.winningsLabel.Name = "winningsLabel";
-            this.winningsLabel.Size = new System.Drawing.Size(394, 38);
+            this.winningsLabel.Size = new System.Drawing.Size(457, 38);
             this.winningsLabel.TabIndex = 6;
             this.winningsLabel.Text = "Выигрыш";
             this.winningsLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -133,12 +136,49 @@
             this.timerLabel.Text = "Timer";
             this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // manButton
+            // 
+            this.manButton.AutoSize = true;
+            this.manButton.BackColor = System.Drawing.Color.White;
+            this.manButton.Image = global::MillionareGame.Properties.Resources.man;
+            this.manButton.Location = new System.Drawing.Point(722, 597);
+            this.manButton.Name = "manButton";
+            this.manButton.Size = new System.Drawing.Size(76, 78);
+            this.manButton.TabIndex = 9;
+            this.manButton.UseVisualStyleBackColor = false;
+            // 
+            // callButton
+            // 
+            this.callButton.AutoSize = true;
+            this.callButton.BackColor = System.Drawing.Color.White;
+            this.callButton.Image = global::MillionareGame.Properties.Resources.call;
+            this.callButton.Location = new System.Drawing.Point(880, 597);
+            this.callButton.Name = "callButton";
+            this.callButton.Size = new System.Drawing.Size(76, 78);
+            this.callButton.TabIndex = 10;
+            this.callButton.UseVisualStyleBackColor = false;
+            // 
+            // fiftyButton
+            // 
+            this.fiftyButton.AutoSize = true;
+            this.fiftyButton.BackColor = System.Drawing.Color.White;
+            this.fiftyButton.Image = global::MillionareGame.Properties.Resources.fifty;
+            this.fiftyButton.Location = new System.Drawing.Point(1027, 597);
+            this.fiftyButton.Name = "fiftyButton";
+            this.fiftyButton.Size = new System.Drawing.Size(76, 78);
+            this.fiftyButton.TabIndex = 11;
+            this.fiftyButton.UseVisualStyleBackColor = false;
+            this.fiftyButton.Click += new System.EventHandler(this.fiftyButton_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MillionareGame.Properties.Resources.LHc0RaYGI3U1;
             this.ClientSize = new System.Drawing.Size(1275, 720);
+            this.Controls.Add(this.fiftyButton);
+            this.Controls.Add(this.callButton);
+            this.Controls.Add(this.manButton);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.winningsLabel);
             this.Controls.Add(this.buttonAnswerD);
@@ -164,5 +204,8 @@
         private System.Windows.Forms.Button buttonAnswerD;
         private System.Windows.Forms.Label winningsLabel;
         private System.Windows.Forms.Label timerLabel;
+        private System.Windows.Forms.Button manButton;
+        private System.Windows.Forms.Button callButton;
+        private System.Windows.Forms.Button fiftyButton;
     }
 }

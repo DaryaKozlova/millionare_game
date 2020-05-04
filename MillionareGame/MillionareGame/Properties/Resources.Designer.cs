@@ -73,6 +73,36 @@ namespace MillionareGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap call {
+            get {
+                object obj = ResourceManager.GetObject("call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Capture {
+            get {
+                object obj = ResourceManager.GetObject("Capture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fifty {
+            get {
+                object obj = ResourceManager.GetObject("fifty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gamejpg {
             get {
                 object obj = ResourceManager.GetObject("gamejpg", resourceCulture);
@@ -106,6 +136,16 @@ namespace MillionareGame.Properties {
         internal static System.Drawing.Bitmap mainMenuBackground {
             get {
                 object obj = ResourceManager.GetObject("mainMenuBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap man {
+            get {
+                object obj = ResourceManager.GetObject("man", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

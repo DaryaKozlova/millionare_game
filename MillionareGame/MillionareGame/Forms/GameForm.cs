@@ -31,6 +31,8 @@ namespace MillionareGame.Forms
             this.questionLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.winningsLabel.BackColor = System.Drawing.Color.Transparent;
+
+
         }
 
         public void StartGame(Game game, Player player)
@@ -218,6 +220,11 @@ namespace MillionareGame.Forms
                     LoadQuestion(_currentQuestion);
                 }
             }
+        }
+
+        private void fiftyButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
