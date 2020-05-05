@@ -42,7 +42,7 @@ namespace MillionareGame.Forms
             }
             else
             {
-                MessageBox.Show($"Игрока с такими данными не существует.");
+                MessageBox.Show($@"Игрока с такими данными не существует.");
             }
         }
 

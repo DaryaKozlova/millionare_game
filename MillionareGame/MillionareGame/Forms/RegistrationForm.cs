@@ -32,13 +32,13 @@ namespace MillionareGame.Forms
 
                 if (newPlayer != null)
                 {
-                    var messageBoxResult = MessageBox.Show($"{newPlayer.Nickname}, вы успешно зарегистрированы!");
+                    var messageBoxResult = MessageBox.Show($@"{newPlayer.Nickname}, вы успешно зарегистрированы!");
 
                     if (messageBoxResult == DialogResult.OK) Close();
                 }
                 else
                 {
-                    MessageBox.Show($"Игрок с таким именем уже зарегистрирован!");
+                    MessageBox.Show($@"Игрок с таким именем уже зарегистрирован!");
                 }
             }
         }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MillionareGame.DataAccess.Models;
@@ -16,6 +18,15 @@ namespace MillionareGame.Forms
         private Timer timer = new Timer();
         private static int GameTime = 30;
         private static int timerInterval = 1000;
+        private bool fiftyUsed = false;
+        private bool manUsed = false;
+        private bool callUsed = false;
+
+        private string[] _names = {
+            "Кирилл", "Лёха", "Саня", "Паша", "Димон", "Ярик", "Гришаня", "Тоха", "Петя", "Мишаня", "Игорь", "Никитос",
+            "Женя", "Славик", "Андрюха", "Владос"
+        };
+
 
         private int[] winnings =
         {
@@ -82,6 +93,15 @@ namespace MillionareGame.Forms
             buttonAnswerC.Enabled = true;
             buttonAnswerD.Enabled = true;
 
+            buttonAnswerA.Visible = true;
+            buttonAnswerB.Visible = true;
+            buttonAnswerC.Visible = true;
+            buttonAnswerD.Visible = true;
+
+            if (!fiftyUsed) fiftyButton.Enabled = true;
+            if (!manUsed) manButton.Enabled = true;
+            if (!callUsed) callButton.Enabled = true;
+
             MusicService.StartMusic("questionThreeMusic");
 
             timerLabel.Text = GameTime.ToString();
@@ -97,6 +117,10 @@ namespace MillionareGame.Forms
             buttonAnswerB.Enabled = false;
             buttonAnswerC.Enabled = false;
             buttonAnswerD.Enabled = false;
+
+            fiftyButton.Enabled = false;
+            manButton.Enabled = false;
+            callButton.Enabled = false;
 
             await Task.Delay(4000);
          
@@ -224,7 +248,136 @@ namespace MillionareGame.Forms
 
         private void fiftyButton_Click(object sender, EventArgs e)
         {
+            var question = _game.Questions[_currentQuestion];
 
+            var firstSuggestion = int.Parse(question.AnswerId);
+
+            var random = new Random();
+            var secondSuggestion = random.Next(1,4);
+
+            while (secondSuggestion == firstSuggestion)
+            {
+                secondSuggestion = random.Next(1, 4);
+            }
+
+            var suggestions = new[] { firstSuggestion, secondSuggestion };
+
+            if (!suggestions.Contains(1))
+            {
+                buttonAnswerA.Visible = false;
+            }
+            if (!suggestions.Contains(2))
+            {
+                buttonAnswerB.Visible = false;
+            }
+            if (!suggestions.Contains(3))
+            {
+                buttonAnswerC.Visible = false;
+            }
+            if (!suggestions.Contains(4))
+            {
+                buttonAnswerD.Visible = false;
+            }
+
+            this.fiftyButton.Enabled = false;
+            fiftyUsed = true;
+        }
+
+        private void manButton_Click(object sender, EventArgs e)
+        {
+            var random = new Random();
+            
+            var leastPercents = 100;
+            
+            var randomRightAnswerPercent = random.Next(51, 75);
+            leastPercents -= randomRightAnswerPercent;
+
+            var randomWrongPercent = leastPercents;
+
+            string aButtonPercents ="", bButtonPercents ="", cButtonPercents ="", dButtonPercents ="";
+
+            var question = _game.Questions[_currentQuestion];
+
+            if (question.AnswerId == "1")
+            {
+                aButtonPercents = randomRightAnswerPercent.ToString();
+            }
+            else
+            {
+                randomWrongPercent = random.Next(0, leastPercents);
+                aButtonPercents = randomWrongPercent.ToString();
+                leastPercents -= randomWrongPercent;
+            }
+            if (question.AnswerId == "2")
+            {
+                bButtonPercents = randomRightAnswerPercent.ToString();
+            }
+            else
+            {
+                randomWrongPercent = random.Next(0, leastPercents);
+                bButtonPercents = randomWrongPercent.ToString();
+                leastPercents -= randomWrongPercent;
+            }
+            if (question.AnswerId == "3")
+            {
+                cButtonPercents = randomRightAnswerPercent.ToString();
+            }
+            else
+            {
+                if (question.AnswerId == "4")
+                {
+                    cButtonPercents = leastPercents.ToString();
+                }
+                else
+                {
+                    randomWrongPercent = random.Next(0, leastPercents);
+                    cButtonPercents = randomWrongPercent.ToString();
+                    leastPercents -= randomWrongPercent;
+                }
+            }
+
+            if (question.AnswerId == "4")
+            {
+                dButtonPercents = randomRightAnswerPercent.ToString();
+            }
+            else
+            {
+                dButtonPercents = leastPercents.ToString();
+            }
+
+            MessageBox.Show($"Ответы зала: \r\n A: {aButtonPercents}% \r\n B: {bButtonPercents}% \r\n C: {cButtonPercents}% \r\n D: {dButtonPercents}%");
+
+            this.manButton.Enabled = false;
+            manUsed = true;
+        }
+
+        private void callButton_Click(object sender, EventArgs e)
+        {
+            var random = new Random();
+            var randomSuggestion = random.Next(1, 4);
+
+            var answer = "";
+            var randomName = _names[random.Next(0, _names.Length)];
+
+            switch (randomSuggestion)
+            {
+                case 1:
+                    answer = "A";
+                    break;
+                case 2:
+                    answer = "B";
+                    break;
+                case 3:
+                    answer = "C";
+                    break;
+                case 4:
+                    answer = "D";
+                    break;
+            }
+
+            MessageBox.Show($@"{randomName} сказал, что правильный ответ: {answer}");
+            this.callButton.Enabled = false;
+            callUsed = true;
         }
     }
 }
