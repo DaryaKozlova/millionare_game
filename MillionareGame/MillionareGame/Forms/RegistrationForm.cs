@@ -13,7 +13,8 @@ namespace MillionareGame.Forms
 {
     public partial class RegistrationForm : Form
     {
-        UserService _userService = new UserService();
+        private UserService _userService = new UserService();
+        private bool _inputsValidated = false;
 
         public RegistrationForm()
         {
@@ -23,7 +24,9 @@ namespace MillionareGame.Forms
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            ValidateInputs();
+
+            if (_inputsValidated)
             {
                 var nickname = nicknameTextBox.Text;
                 var password = passwordTextBox.Text;
@@ -43,21 +46,32 @@ namespace MillionareGame.Forms
             }
         }
 
-        private void registerButton_Validating(object sender, CancelEventArgs e)
+        private void ValidateInputs()
         {
+            if(!string.IsNullOrWhiteSpace(nicknameTextBox.Text)) errorProvider.SetError(nicknameTextBox, null);
+            else errorProvider.SetError(nicknameTextBox, "Введите ваше имя пользователя.");
+
+            if (!string.IsNullOrWhiteSpace(passwordTextBox.Text)) errorProvider.SetError(passwordTextBox, null);
+            else errorProvider.SetError(passwordTextBox, "Введите ваш пароль.");
+
             if (!string.IsNullOrWhiteSpace(nicknameTextBox.Text) && !string.IsNullOrWhiteSpace(passwordTextBox.Text))
-            {
-                errorProvider.SetError(nicknameTextBox, null);
-                errorProvider.SetError(passwordTextBox, null);
-            }
-            else
-            {
-                e.Cancel = true;
+                _inputsValidated = true;
+            else _inputsValidated = false;
+        }
 
-                errorProvider.SetError(passwordTextBox, "Введите ваш пароль.");
-                errorProvider.SetError(nicknameTextBox, "Введите ваше имя пользователя.");
+        private void nicknameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = CheckValidSymbols(e);
+        }
 
-            }
+        private void passwordTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = CheckValidSymbols(e);
+        }
+
+        private bool CheckValidSymbols(KeyPressEventArgs e)
+        {
+            return e.KeyChar == (char)Keys.Space || e.KeyChar == (char)Keys.Enter;
         }
     }
 }

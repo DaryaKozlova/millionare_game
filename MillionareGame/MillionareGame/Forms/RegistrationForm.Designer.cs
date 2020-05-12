@@ -50,7 +50,6 @@
             this.registerButton.Text = "REGISTER";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
-            this.registerButton.Validating += new System.ComponentModel.CancelEventHandler(this.registerButton_Validating);
             // 
             // passwordTextBox
             // 
@@ -62,6 +61,7 @@
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(149, 31);
             this.passwordTextBox.TabIndex = 7;
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTextBox_KeyPress);
             // 
             // nicknameTextBox
             // 
@@ -72,6 +72,7 @@
             this.nicknameTextBox.Name = "nicknameTextBox";
             this.nicknameTextBox.Size = new System.Drawing.Size(149, 31);
             this.nicknameTextBox.TabIndex = 5;
+            this.nicknameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nicknameTextBox_KeyPress);
             // 
             // passwordLable
             // 
