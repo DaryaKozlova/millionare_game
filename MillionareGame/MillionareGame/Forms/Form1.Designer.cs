@@ -115,7 +115,6 @@
             this.playerGames.UseCompatibleStateImageBehavior = false;
             this.playerGames.View = System.Windows.Forms.View.Details;
             this.playerGames.Visible = false;
-            this.playerGames.SelectedIndexChanged += new System.EventHandler(this.playerGames_SelectedIndexChanged);
             // 
             // AnsweredQuestions
             // 
@@ -168,7 +167,6 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Main menu";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

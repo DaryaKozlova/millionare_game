@@ -111,15 +111,5 @@ namespace MillionareGame
             Player = null;
             CheckIfPlayerLogged(sender, e);
         }
-
-        private void playerGames_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

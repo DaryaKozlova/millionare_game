@@ -213,6 +213,7 @@ namespace MillionareGame.Forms
             {
                 currTime--;
                 timerLabel.Text = currTime.ToString();
+               // timerLabel.Text = "Время для ответа: "+currTime.ToString() + " секунд" ;
             }
         }
 

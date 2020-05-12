@@ -26,8 +26,6 @@ namespace MillionareGame.Services
                 AnsweredQuestionsCount = 0,
             };
 
-            // запись игры в файл рЕШИТЬ ЧТО ДЕЛАТЬ
-
             return game;
         }
 
