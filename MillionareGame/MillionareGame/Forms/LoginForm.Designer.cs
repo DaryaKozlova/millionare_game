@@ -60,18 +60,18 @@
             // 
             // nicknameTextBox
             // 
-            this.nicknameTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nicknameTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nicknameTextBox.Location = new System.Drawing.Point(224, 84);
             this.nicknameTextBox.MaxLength = 32;
             this.nicknameTextBox.Multiline = true;
             this.nicknameTextBox.Name = "nicknameTextBox";
             this.nicknameTextBox.Size = new System.Drawing.Size(167, 34);
             this.nicknameTextBox.TabIndex = 1;
-            this.nicknameTextBox.Text = "Dasha";
+            this.nicknameTextBox.Text = "Мяу";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.Location = new System.Drawing.Point(224, 127);
             this.passwordTextBox.MaxLength = 64;
             this.passwordTextBox.Multiline = true;

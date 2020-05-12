@@ -54,17 +54,18 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.Location = new System.Drawing.Point(232, 128);
             this.passwordTextBox.MaxLength = 10;
             this.passwordTextBox.Multiline = true;
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(149, 31);
             this.passwordTextBox.TabIndex = 7;
             // 
             // nicknameTextBox
             // 
-            this.nicknameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nicknameTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nicknameTextBox.Location = new System.Drawing.Point(232, 88);
             this.nicknameTextBox.MaxLength = 10;
             this.nicknameTextBox.Multiline = true;
