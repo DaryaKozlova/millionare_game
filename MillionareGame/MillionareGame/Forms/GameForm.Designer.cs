@@ -58,49 +58,53 @@
             // 
             // buttonAnswerA
             // 
-            this.buttonAnswerA.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerA.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerA.Location = new System.Drawing.Point(141, 325);
             this.buttonAnswerA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerA.Name = "buttonAnswerA";
             this.buttonAnswerA.Size = new System.Drawing.Size(451, 65);
             this.buttonAnswerA.TabIndex = 2;
             this.buttonAnswerA.Text = "A";
+            this.buttonAnswerA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAnswerA.UseVisualStyleBackColor = true;
             this.buttonAnswerA.Click += new System.EventHandler(this.buttonAnswerA_Click);
             // 
             // buttonAnswerB
             // 
-            this.buttonAnswerB.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerB.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerB.Location = new System.Drawing.Point(685, 325);
             this.buttonAnswerB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerB.Name = "buttonAnswerB";
             this.buttonAnswerB.Size = new System.Drawing.Size(451, 65);
             this.buttonAnswerB.TabIndex = 3;
             this.buttonAnswerB.Text = "B";
+            this.buttonAnswerB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAnswerB.UseVisualStyleBackColor = true;
             this.buttonAnswerB.Click += new System.EventHandler(this.buttonAnswerB_Click);
             // 
             // buttonAnswerC
             // 
-            this.buttonAnswerC.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerC.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerC.Location = new System.Drawing.Point(141, 430);
             this.buttonAnswerC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerC.Name = "buttonAnswerC";
             this.buttonAnswerC.Size = new System.Drawing.Size(451, 65);
             this.buttonAnswerC.TabIndex = 4;
             this.buttonAnswerC.Text = "C";
+            this.buttonAnswerC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAnswerC.UseVisualStyleBackColor = true;
             this.buttonAnswerC.Click += new System.EventHandler(this.buttonAnswerC_Click);
             // 
             // buttonAnswerD
             // 
-            this.buttonAnswerD.Font = new System.Drawing.Font("Yu Gothic UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnswerD.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAnswerD.Location = new System.Drawing.Point(685, 430);
             this.buttonAnswerD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAnswerD.Name = "buttonAnswerD";
             this.buttonAnswerD.Size = new System.Drawing.Size(451, 65);
             this.buttonAnswerD.TabIndex = 5;
             this.buttonAnswerD.Text = "D";
+            this.buttonAnswerD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonAnswerD.UseVisualStyleBackColor = true;
             this.buttonAnswerD.Click += new System.EventHandler(this.buttonAnswerD_Click);
             // 
@@ -125,13 +129,13 @@
             this.timerLabel.AutoEllipsis = true;
             this.timerLabel.AutoSize = true;
             this.timerLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.timerLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timerLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerLabel.ForeColor = System.Drawing.Color.SeaShell;
             this.timerLabel.Location = new System.Drawing.Point(12, 9);
             this.timerLabel.MaximumSize = new System.Drawing.Size(900, 492);
             this.timerLabel.Name = "timerLabel";
             this.timerLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.timerLabel.Size = new System.Drawing.Size(93, 41);
+            this.timerLabel.Size = new System.Drawing.Size(88, 38);
             this.timerLabel.TabIndex = 7;
             this.timerLabel.Text = "Timer";
             this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
