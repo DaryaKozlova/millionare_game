@@ -67,7 +67,8 @@
             this.nicknameTextBox.Name = "nicknameTextBox";
             this.nicknameTextBox.Size = new System.Drawing.Size(167, 34);
             this.nicknameTextBox.TabIndex = 1;
-            this.nicknameTextBox.Text = "Мяу";
+            this.nicknameTextBox.Text = "Darya";
+            this.nicknameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nicknameTextBox_KeyPress);
             // 
             // passwordTextBox
             // 
@@ -80,6 +81,7 @@
             this.passwordTextBox.Size = new System.Drawing.Size(167, 34);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.Text = "123";
+            this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTextBox_KeyPress);
             // 
             // logButton
             // 
@@ -94,7 +96,6 @@
             this.logButton.Text = "LOG IN";
             this.logButton.UseVisualStyleBackColor = false;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);
-            this.logButton.Validating += new System.ComponentModel.CancelEventHandler(this.logButton_Validating);
             // 
             // errorProvider
             // 
