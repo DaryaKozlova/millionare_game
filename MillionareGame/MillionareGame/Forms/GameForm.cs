@@ -269,10 +269,24 @@ namespace MillionareGame.Forms
             }
             else
             {
-                var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
-                if (messageBox == DialogResult.OK)
+                if (_game.Questions.Count==_currentQuestion)
                 {
-                    StopGame();
+                    var messageBox = MessageBox.Show($@"Поздравдяем! Вы выиграли {winnings[_currentQuestion-1]} рублей!");
+
+                    if (messageBox == DialogResult.OK)
+                    {
+                        StopGame();
+                    }
+                }
+                else
+                {
+                    var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
+
+                    if (messageBox == DialogResult.OK)
+                    {
+                        StopGame();
+                    }
+
                 }
             }
 

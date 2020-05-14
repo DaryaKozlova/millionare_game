@@ -1,1 +1,20 @@
-[{"Id":"80cc539e-dfaf-4967-98a3-fd33a21237ec","Nickname":"Dasha","Password":"123","Type":1,"RegistrationDate":"2020-05-12T22:30:25.4449159+03:00","PlayedGamesCount":0,"TotalScore":0},{"Id":"f513701d-57c1-48fd-a91f-32abbdc93355","Nickname":"Anton","Password":"456\r\n456","Type":1,"RegistrationDate":"2020-05-12T22:29:35.2566709+03:00","PlayedGamesCount":0,"TotalScore":0},{"Id":"e13a4768-fba5-4d06-8e4c-80a729c8eb54","Nickname":"AntonDrab","Password":"123","Type":1,"RegistrationDate":"2020-04-11T16:15:04.0341196+03:00","PlayedGamesCount":0,"TotalScore":0},{"Id":"ad4d4afd-ab24-4a2c-b00c-f65d941260e7","Nickname":"qwe","Password":"123","Type":1,"RegistrationDate":"2020-04-26T12:01:36.0608204+03:00","PlayedGamesCount":1,"TotalScore":0},{"Id":"ba8ec74f-d840-4922-a581-82a7dcd1db05","Nickname":"123","Password":"233","Type":1,"RegistrationDate":"2020-05-12T22:36:50.4530901+03:00","PlayedGamesCount":0,"TotalScore":0},{"Id":"6dca065f-a608-472d-a470-fc4d8bc209d4","Nickname":"Мяу","Password":"123","Type":1,"RegistrationDate":"2020-05-12T22:40:46.6979126+03:00","PlayedGamesCount":2,"TotalScore":200000}]
+[
+  {
+    "Id": "d9da62e1-166c-4f70-9425-81b8f2fbd24c",
+    "Nickname": "Dasha",
+    "Password": "123",
+    "Type": 1,
+    "RegistrationDate": "2020-05-13T17:17:42.007615+03:00",
+    "PlayedGamesCount": 2,
+    "TotalScore": 15500
+  },
+  {
+    "Id": "e13a4768-fba5-4d06-8e4c-80a729c8eb54",
+    "Nickname": "AntonDrab",
+    "Password": "123",
+    "Type": 1,
+    "RegistrationDate": "2020-04-11T16:15:04.0341196+03:00",
+    "PlayedGamesCount": 0,
+    "TotalScore": 0
+  }
+]
