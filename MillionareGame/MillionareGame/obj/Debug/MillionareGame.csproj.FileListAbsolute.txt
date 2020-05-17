@@ -1,4 +1,3 @@
-D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Form1.resources
 D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Properties.Resources.resources
 D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csproj.GenerateResource.cache
 D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\bin\Debug\MillionareGame.exe.config
@@ -32,3 +31,4 @@ D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareG
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.pdb
 D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csprojAssemblyReference.cache
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.MainForm.resources
+D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.MainForm.resources

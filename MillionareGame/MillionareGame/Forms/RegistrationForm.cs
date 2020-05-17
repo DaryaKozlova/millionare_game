@@ -73,5 +73,10 @@ namespace MillionareGame.Forms
         {
             return e.KeyChar == (char)Keys.Space || e.KeyChar == (char)Keys.Enter;
         }
+
+        private void nicknameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -18,8 +18,8 @@ namespace MillionareGame.Forms
         private Timer timer = new Timer();
 
         private int _roundTime;
-        private static int GameTime = 30;
-        private static int timerInterval = 1000;
+        private static int GameTime = 60; //sec
+        private static int timerInterval = 1000; //ms
         private bool fiftyUsed = false;
         private bool manUsed = false;
         private bool callUsed = false;
@@ -48,6 +48,7 @@ namespace MillionareGame.Forms
             this.questionLabel.BackColor = System.Drawing.Color.Transparent;
             this.timerLabel.BackColor = System.Drawing.Color.Transparent;
             this.winningsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.questionNumber.BackColor = System.Drawing.Color.Transparent;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -59,8 +60,21 @@ namespace MillionareGame.Forms
 
             if (!isClosingEvent)
             {
-                isClosingEvent = true;
-                EndGameEvent();
+                timer.Stop();
+
+                var messageBox = MessageBox.Show("Вы хотите завершить игру?", "Closing", MessageBoxButtons.YesNo);
+
+                if (messageBox == DialogResult.Yes)
+                {
+                    isClosingEvent = true;
+                    EndGameEvent();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+
+                timer.Start();
             }
         }
 
@@ -102,6 +116,8 @@ namespace MillionareGame.Forms
         {
             var question = _game.Questions[questionNumber];
             questionLabel.Text = question.QuestionText;
+
+            this.questionNumber.Text = $"Вопрос {questionNumber + 1}/{_game.Questions.Count}";
 
             buttonAnswerA.Text = "A: " + question.Variants[0].Text;
             buttonAnswerB.Text = "Б: " + question.Variants[1].Text;
@@ -299,11 +315,10 @@ namespace MillionareGame.Forms
                 {
                     var messageBox = MessageBox.Show($@"Вы выиграли {winnings[_currentQuestion]} рублей!");
 
-                    if (messageBox == DialogResult.OK)
-                    {
-                        StopGame();
-                    }
-
+                        if (messageBox == DialogResult.OK)
+                        {
+                            StopGame();
+                        }
                 }
             }
 

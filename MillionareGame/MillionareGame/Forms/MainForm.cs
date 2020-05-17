@@ -79,7 +79,7 @@ namespace MillionareGame.Forms
                 logoutButton.Show();
 
                 
-                hello_label.Text = $"HELLO, {Player.Nickname}";
+                hello_label.Text = $"Привет, {Player.Nickname}";
             }
 
             if (Player == null)
