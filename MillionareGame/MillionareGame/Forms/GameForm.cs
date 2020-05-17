@@ -24,6 +24,7 @@ namespace MillionareGame.Forms
         private bool manUsed = false;
         private bool callUsed = false;
         private bool isClosingEvent = false;
+        private bool DisableMusic = false;
 
         private string[] _names = {
             "Кирилл", "Лёха", "Саня", "Паша", "Димон", "Ярик", "Гришаня", "Тоха", "Петя", "Мишаня", "Игорь", "Никитос",
@@ -35,9 +36,12 @@ namespace MillionareGame.Forms
             0, 500, 1000, 3000, 5000, 10000, 15000, 25000, 50000, 100000, 200000, 400000, 800000, 1500000, 3000000
         };
 
-        public GameForm(Game game, Player player)
+        public GameForm(Game game, Player player, bool disableMusic)
         {
             InitializeComponent();
+
+            this.DisableMusic = disableMusic;
+            SoundCheck();
 
             StartGame(game, player);
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -48,7 +52,12 @@ namespace MillionareGame.Forms
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            if(!isClosingEvent)
+            if (this.Owner is MainForm mainMenu)
+            {
+                mainMenu.DisableMusic = this.DisableMusic;
+            }
+
+            if (!isClosingEvent)
             {
                 isClosingEvent = true;
                 EndGameEvent();
@@ -84,6 +93,7 @@ namespace MillionareGame.Forms
             if (!isClosingEvent)
             {
                 isClosingEvent = true;
+
                 Close();
             }
         }
@@ -94,9 +104,9 @@ namespace MillionareGame.Forms
             questionLabel.Text = question.QuestionText;
 
             buttonAnswerA.Text = "A: " + question.Variants[0].Text;
-            buttonAnswerB.Text = "B: " + question.Variants[1].Text;
-            buttonAnswerC.Text = "C: " + question.Variants[2].Text;
-            buttonAnswerD.Text = "D: " + question.Variants[3].Text;
+            buttonAnswerB.Text = "Б: " + question.Variants[1].Text;
+            buttonAnswerC.Text = "В: " + question.Variants[2].Text;
+            buttonAnswerD.Text = "Г: " + question.Variants[3].Text;
 
             buttonAnswerA.BackColor = default;
             buttonAnswerB.BackColor = default;
@@ -117,7 +127,7 @@ namespace MillionareGame.Forms
             if (!manUsed) manButton.Enabled = true;
             if (!callUsed) callButton.Enabled = true;
 
-            MusicService.StartMusic("questionThreeMusic");
+            PlayMusic(MusicService.Sounds.QuestionThreeMusic);
 
             _roundTime = GameTime;
             SetTimerLabelSeconds(_roundTime);
@@ -127,7 +137,7 @@ namespace MillionareGame.Forms
         private async void ShowRightAnswer(string clickedButton)
         {
             timer.Stop();
-            MusicService.StartMusic("buttonWaitAnswer");
+            PlayMusic(MusicService.Sounds.ButtonWaitAnswer);
 
             buttonAnswerA.Enabled = false;
             buttonAnswerB.Enabled = false;
@@ -142,7 +152,7 @@ namespace MillionareGame.Forms
          
             var question = _game.Questions[_currentQuestion];
 
-            MusicService.StartMusic(question.AnswerId == clickedButton ? "correctAnswer" : "wrongAnswer");
+            PlayMusic(question.AnswerId == clickedButton ? MusicService.Sounds.CorrectAnswer : MusicService.Sounds.WrongAnswer);
 
             switch (question.AnswerId)
             {
@@ -180,6 +190,13 @@ namespace MillionareGame.Forms
             {
                 EndGameEvent();
             }
+        }
+
+        private void PlayMusic(MusicService.Sounds sound)
+        {
+            MusicService.SetMusic(sound);
+            if (!DisableMusic) MusicService.PlayMusic();
+            else MusicService.StopMusic();
         }
 
         private async void buttonAnswerA_Click(object sender, EventArgs e)
@@ -391,7 +408,7 @@ namespace MillionareGame.Forms
                 dButtonPercents = leastPercents.ToString();
             }
 
-            MessageBox.Show($"Ответы зала: \r\n A: {aButtonPercents}% \r\n B: {bButtonPercents}% \r\n C: {cButtonPercents}% \r\n D: {dButtonPercents}%");
+            MessageBox.Show($"Ответы зала: \r\n A: {aButtonPercents}% \r\n Б: {bButtonPercents}% \r\n В: {cButtonPercents}% \r\n Г: {dButtonPercents}%");
 
             this.manButton.Enabled = false;
             manUsed = true;
@@ -411,19 +428,50 @@ namespace MillionareGame.Forms
                     answer = "A";
                     break;
                 case 2:
-                    answer = "B";
+                    answer = "Б";
                     break;
                 case 3:
-                    answer = "C";
+                    answer = "В";
                     break;
                 case 4:
-                    answer = "D";
+                    answer = "Г";
                     break;
             }
 
             MessageBox.Show($@"{randomName} сказал, что правильный ответ: {answer}");
             this.callButton.Enabled = false;
             callUsed = true;
+        }
+
+        private void SoundCheck()
+        {
+            if (DisableMusic)
+            {
+                musicButton.BackgroundImage = Properties.Resources.disabledSound;
+                MusicService.StopMusic();
+
+            }
+            else
+            {
+                musicButton.BackgroundImage = Properties.Resources.activeSound;
+                MusicService.PlayMusic();
+            }
+        }
+
+        private void musicButton_Click(object sender, EventArgs e)
+        {
+            if (DisableMusic)
+            {
+                DisableMusic = false;
+                musicButton.BackgroundImage = Properties.Resources.activeSound;
+                MusicService.PlayMusic();
+            }
+            else
+            {
+                DisableMusic = true;
+                musicButton.BackgroundImage = Properties.Resources.disabledSound;
+                MusicService.StopMusic();
+            }
         }
     }
 }

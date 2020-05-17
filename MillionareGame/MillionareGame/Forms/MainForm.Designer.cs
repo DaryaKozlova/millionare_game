@@ -1,6 +1,6 @@
-﻿namespace MillionareGame
+﻿namespace MillionareGame.Forms
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,10 +33,11 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.hello_label = new System.Windows.Forms.Label();
             this.playerGames = new System.Windows.Forms.ListView();
+            this.DATE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AnsweredQuestions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TotalScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.logoutButton = new System.Windows.Forms.Button();
-            this.DATE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.musicButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startGameButton
@@ -50,7 +51,7 @@
             this.startGameButton.Name = "startGameButton";
             this.startGameButton.Size = new System.Drawing.Size(351, 79);
             this.startGameButton.TabIndex = 0;
-            this.startGameButton.Text = "START GAME";
+            this.startGameButton.Text = "Начать игру";
             this.startGameButton.UseVisualStyleBackColor = true;
             this.startGameButton.Click += new System.EventHandler(this.startGameButton_Click);
             // 
@@ -65,7 +66,7 @@
             this.registrationButton.Name = "registrationButton";
             this.registrationButton.Size = new System.Drawing.Size(351, 84);
             this.registrationButton.TabIndex = 1;
-            this.registrationButton.Text = "REGISTRATION";
+            this.registrationButton.Text = "Регистрация";
             this.registrationButton.UseVisualStyleBackColor = true;
             this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
@@ -80,7 +81,7 @@
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(351, 80);
             this.loginButton.TabIndex = 2;
-            this.loginButton.Text = "LOGIN";
+            this.loginButton.Text = "Авторизация";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
@@ -92,7 +93,7 @@
             this.hello_label.ForeColor = System.Drawing.Color.SeaShell;
             this.hello_label.Location = new System.Drawing.Point(4, 9);
             this.hello_label.Name = "hello_label";
-            this.hello_label.Size = new System.Drawing.Size(0, 57);
+            this.hello_label.Size = new System.Drawing.Size(0, 46);
             this.hello_label.TabIndex = 3;
             // 
             // playerGames
@@ -116,14 +117,19 @@
             this.playerGames.View = System.Windows.Forms.View.Details;
             this.playerGames.Visible = false;
             // 
+            // DATE
+            // 
+            this.DATE.Text = "Дата игры";
+            this.DATE.Width = 200;
+            // 
             // AnsweredQuestions
             // 
-            this.AnsweredQuestions.Text = "ANSWERS";
+            this.AnsweredQuestions.Text = "Ответов";
             this.AnsweredQuestions.Width = 120;
             // 
             // TotalScore
             // 
-            this.TotalScore.Text = "TOTAL SCORE";
+            this.TotalScore.Text = "Сумма очков";
             this.TotalScore.Width = 160;
             // 
             // logoutButton
@@ -137,23 +143,31 @@
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(351, 80);
             this.logoutButton.TabIndex = 5;
-            this.logoutButton.Text = "LOG OUT";
+            this.logoutButton.Text = "Выйти";
             this.logoutButton.UseVisualStyleBackColor = true;
             this.logoutButton.Visible = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
-            // DATE
+            // musicButton
             // 
-            this.DATE.Text = "DATE";
-            this.DATE.Width = 200;
+            this.musicButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.musicButton.BackgroundImage = global::MillionareGame.Properties.Resources.activeSound;
+            this.musicButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.musicButton.Location = new System.Drawing.Point(1217, 658);
+            this.musicButton.Name = "musicButton";
+            this.musicButton.Size = new System.Drawing.Size(80, 80);
+            this.musicButton.TabIndex = 6;
+            this.musicButton.UseVisualStyleBackColor = true;
+            this.musicButton.Click += new System.EventHandler(this.musicButton_Click);
             // 
-            // Form1
+            // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MillionareGame.Properties.Resources.mainMenuBackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1309, 750);
+            this.Controls.Add(this.musicButton);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.playerGames);
             this.Controls.Add(this.hello_label);
@@ -165,7 +179,7 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Main menu";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,6 +197,7 @@
         private System.Windows.Forms.ColumnHeader TotalScore;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.ColumnHeader DATE;
+        private System.Windows.Forms.Button musicButton;
     }
 }
 

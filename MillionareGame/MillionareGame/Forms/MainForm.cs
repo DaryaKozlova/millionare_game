@@ -1,52 +1,44 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MillionareGame.DataAccess.Models;
-using MillionareGame.Forms;
 using MillionareGame.Services;
-using WMPLib;
 
-namespace MillionareGame
+namespace MillionareGame.Forms
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly GameService _gameService = new GameService();
         private UserService _userService = new UserService();
         public Player Player;
+        public bool DisableMusic = false;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
 
-            MusicService.StartMusic("mainTheme");
+            PlayMusic(MusicService.Sounds.MainTheme);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.hello_label.BackColor = System.Drawing.Color.Transparent;
-
         }
 
         private void startGameButton_Click(object sender, EventArgs e)
         {
             var game = _gameService.StartGame();
-
-            var gameForm = new GameForm(game, Player);
-
+            
             MusicService.StopMusic();
             Hide();
 
+            var gameForm = new Forms.GameForm(game, Player, DisableMusic) {Owner = this};
+
             gameForm.ShowDialog();
+
+            SoundCheck();
 
             if (Player != null) RefreshScoreTable();
             Show();
 
-            MusicService.StartMusic("mainTheme");
+            PlayMusic(MusicService.Sounds.MainTheme);
         }
 
         private void registrationButton_Click(object sender, EventArgs e)
@@ -65,6 +57,13 @@ namespace MillionareGame
             loginForm.FormClosed += CheckIfPlayerLogged;
 
             loginForm.ShowDialog();
+        }
+
+        private void PlayMusic(MusicService.Sounds sound)
+        {
+            MusicService.SetMusic(sound);
+            if (!DisableMusic) MusicService.PlayMusic();
+            else MusicService.StopMusic();
         }
 
         private void CheckIfPlayerLogged(object sender, EventArgs e)
@@ -110,6 +109,37 @@ namespace MillionareGame
         {
             Player = null;
             CheckIfPlayerLogged(sender, e);
+        }
+
+        private void SoundCheck()
+        {
+            if (DisableMusic)
+            {
+                musicButton.BackgroundImage = Properties.Resources.disabledSound;
+                MusicService.StopMusic();
+
+            }
+            else
+            {
+                musicButton.BackgroundImage = Properties.Resources.activeSound;
+                MusicService.PlayMusic();
+            }
+        }
+
+        private void musicButton_Click(object sender, EventArgs e)
+        {
+            if (DisableMusic)
+            {
+                DisableMusic = false;
+                musicButton.BackgroundImage = Properties.Resources.activeSound;
+                MusicService.PlayMusic();
+            }
+            else
+            {
+                DisableMusic = true;
+                musicButton.BackgroundImage = Properties.Resources.disabledSound;
+                MusicService.StopMusic();
+            }
         }
     }
 }

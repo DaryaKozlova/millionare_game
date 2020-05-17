@@ -41,31 +41,34 @@
             // nicknameLabel
             // 
             this.nicknameLabel.AutoSize = true;
-            this.nicknameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nicknameLabel.Location = new System.Drawing.Point(79, 83);
+            this.nicknameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 11.8F);
+            this.nicknameLabel.Location = new System.Drawing.Point(19, 71);
+            this.nicknameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nicknameLabel.Name = "nicknameLabel";
-            this.nicknameLabel.Size = new System.Drawing.Size(135, 32);
+            this.nicknameLabel.Size = new System.Drawing.Size(145, 21);
             this.nicknameLabel.TabIndex = 1;
-            this.nicknameLabel.Text = "NICKNAME";
+            this.nicknameLabel.Text = "Имя пользователя:";
             // 
             // passwordLable
             // 
             this.passwordLable.AutoSize = true;
-            this.passwordLable.Font = new System.Drawing.Font("Yu Gothic UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLable.Location = new System.Drawing.Point(79, 127);
+            this.passwordLable.Font = new System.Drawing.Font("Yu Gothic UI", 11.8F);
+            this.passwordLable.Location = new System.Drawing.Point(98, 106);
+            this.passwordLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.passwordLable.Name = "passwordLable";
-            this.passwordLable.Size = new System.Drawing.Size(139, 32);
+            this.passwordLable.Size = new System.Drawing.Size(66, 21);
             this.passwordLable.TabIndex = 0;
-            this.passwordLable.Text = "PASSWORD";
+            this.passwordLable.Text = "Пароль:";
             // 
             // nicknameTextBox
             // 
             this.nicknameTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nicknameTextBox.Location = new System.Drawing.Point(224, 84);
+            this.nicknameTextBox.Location = new System.Drawing.Point(168, 68);
+            this.nicknameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nicknameTextBox.MaxLength = 32;
             this.nicknameTextBox.Multiline = true;
             this.nicknameTextBox.Name = "nicknameTextBox";
-            this.nicknameTextBox.Size = new System.Drawing.Size(167, 34);
+            this.nicknameTextBox.Size = new System.Drawing.Size(126, 28);
             this.nicknameTextBox.TabIndex = 1;
             this.nicknameTextBox.Text = "Darya";
             this.nicknameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nicknameTextBox_KeyPress);
@@ -73,12 +76,13 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(224, 127);
+            this.passwordTextBox.Location = new System.Drawing.Point(168, 103);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.MaxLength = 64;
             this.passwordTextBox.Multiline = true;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(167, 34);
+            this.passwordTextBox.Size = new System.Drawing.Size(126, 28);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.Text = "123";
             this.passwordTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passwordTextBox_KeyPress);
@@ -89,11 +93,12 @@
             this.logButton.BackgroundImage = global::MillionareGame.Properties.Resources.btm1;
             this.logButton.Font = new System.Drawing.Font("Yu Gothic UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logButton.ForeColor = System.Drawing.Color.SeaShell;
-            this.logButton.Location = new System.Drawing.Point(137, 204);
+            this.logButton.Location = new System.Drawing.Point(103, 166);
+            this.logButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logButton.Name = "logButton";
-            this.logButton.Size = new System.Drawing.Size(194, 46);
+            this.logButton.Size = new System.Drawing.Size(146, 37);
             this.logButton.TabIndex = 1;
-            this.logButton.Text = "LOG IN";
+            this.logButton.Text = "Войти";
             this.logButton.UseVisualStyleBackColor = false;
             this.logButton.Click += new System.EventHandler(this.logButton_Click);
             // 
@@ -105,10 +110,10 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(474, 317);
+            this.ClientSize = new System.Drawing.Size(356, 258);
             this.Controls.Add(this.logButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.nicknameTextBox);
@@ -116,6 +121,7 @@
             this.Controls.Add(this.nicknameLabel);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";

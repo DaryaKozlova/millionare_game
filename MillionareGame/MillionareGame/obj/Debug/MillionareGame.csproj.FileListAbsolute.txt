@@ -22,7 +22,6 @@ D:\Workspace\millionare_game\MillionareGame\MillionareGame\bin\Debug\Newtonsoft.
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csprojAssemblyReference.cache
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\Interop.WMPLib.dll
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csproj.ResolveComReference.cache
-D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Form1.resources
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.GameForm.resources
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.LoginForm.resources
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.RegistrationForm.resources
@@ -32,3 +31,4 @@ D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareG
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.exe
 D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.pdb
 D:\Workspace\CourseWork_4_sem\MillionareGame\MillionareGame\obj\Debug\MillionareGame.csprojAssemblyReference.cache
+D:\Workspace\millionare_game\MillionareGame\MillionareGame\obj\Debug\MillionareGame.Forms.MainForm.resources

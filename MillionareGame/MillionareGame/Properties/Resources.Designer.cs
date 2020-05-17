@@ -63,6 +63,16 @@ namespace MillionareGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap activeSound {
+            get {
+                object obj = ResourceManager.GetObject("activeSound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btm1 {
             get {
                 object obj = ResourceManager.GetObject("btm1", resourceCulture);
@@ -76,6 +86,16 @@ namespace MillionareGame.Properties {
         internal static System.Drawing.Bitmap call {
             get {
                 object obj = ResourceManager.GetObject("call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap disabledSound {
+            get {
+                object obj = ResourceManager.GetObject("disabledSound", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
