@@ -27,8 +27,8 @@ namespace MillionareGame.Forms
         private bool DisableMusic = false;
 
         private string[] _names = {
-            "Кирилл", "Лёха", "Саня", "Паша", "Димон", "Ярик", "Гришаня", "Тоха", "Петя", "Мишаня", "Игорь", "Никитос",
-            "Женя", "Славик", "Андрюха", "Владос"
+            "Кирилл", "Алексей", "Сашя", "Паша", "Дмитрий", "Ярослав", "Григорий", "Антон", "Петя", "Миша", "Игорь", "Никита",
+            "Женя", "Вячкслав", "Андрей", "Влад"
         };
 
         private int[] winnings =
@@ -464,7 +464,6 @@ namespace MillionareGame.Forms
             {
                 musicButton.BackgroundImage = Properties.Resources.disabledSound;
                 MusicService.StopMusic();
-
             }
             else
             {
