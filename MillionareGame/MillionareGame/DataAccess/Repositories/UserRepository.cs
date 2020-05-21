@@ -23,9 +23,7 @@ namespace MillionareGame.DataAccess.Repositories
             }
             else
             {
-                var playerIndex = players.FindIndex(existPlayer => existPlayer.Nickname == player.Nickname);
-
-                players[playerIndex] = player;
+                return null;
             }
 
             File.WriteAllText(_filePath, JsonConvert.SerializeObject(players));

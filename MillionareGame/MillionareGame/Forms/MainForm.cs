@@ -18,6 +18,7 @@ namespace MillionareGame.Forms
             InitializeComponent();
 
             PlayMusic(MusicService.Sounds.MainTheme);
+
             this.StartPosition = FormStartPosition.CenterScreen;
             this.hello_label.BackColor = System.Drawing.Color.Transparent;
         }
@@ -29,7 +30,7 @@ namespace MillionareGame.Forms
             MusicService.StopMusic();
             Hide();
 
-            var gameForm = new Forms.GameForm(game, Player, DisableMusic) {Owner = this};
+            var gameForm = new GameForm(game, Player, DisableMusic) {Owner = this}; 
 
             gameForm.ShowDialog();
 
@@ -54,9 +55,8 @@ namespace MillionareGame.Forms
                 Owner = this
             };
 
-            loginForm.FormClosed += CheckIfPlayerLogged;
-
             loginForm.ShowDialog();
+            CheckIfPlayerLogged();
         }
 
         private void PlayMusic(MusicService.Sounds sound)
@@ -66,7 +66,7 @@ namespace MillionareGame.Forms
             else MusicService.StopMusic();
         }
 
-        private void CheckIfPlayerLogged(object sender, EventArgs e)
+        private void CheckIfPlayerLogged()
         {
             if (Player != null)
             {
@@ -108,7 +108,7 @@ namespace MillionareGame.Forms
         private void logoutButton_Click(object sender, EventArgs e)
         {
             Player = null;
-            CheckIfPlayerLogged(sender, e);
+            CheckIfPlayerLogged();
         }
 
         private void SoundCheck()

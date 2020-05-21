@@ -42,7 +42,7 @@ namespace MillionareGame.Services
 
             try
             {
-                MusicPlayer.URL = MusicPlayer.URL = SoundPath + soundName + ".mp3";
+                MusicPlayer.URL = SoundPath + soundName + ".mp3";
             }
             catch
             { }
